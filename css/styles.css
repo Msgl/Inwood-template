@@ -952,7 +952,7 @@ header #burger {
     padding: 2.25rem 0;
   }
   .designed .designers-boxes .box {
-    width: 45%;
+    width: 50%;
   }
   .categories-section .content {
     flex-direction: column;
@@ -1071,9 +1071,6 @@ header #burger {
   }
   .special-package .content-wrapper .product .primary-text button {
     margin: 10px auto;
-  }
-  .designed .designers-boxes .box {
-    min-height: 230px;
   }
   .benefits .content .box h3 {
     font-size: 1.4rem;
