@@ -11,6 +11,7 @@ body {
     font-family: $primary-font;
     color: $clr-main-dark;
     font-size: 16px;
+    overflow-x: hidden;
     &::-webkit-scrollbar {
         width: 12px;
         &-track {
@@ -876,6 +877,7 @@ header {
                     left: 0;
                     display: grid;
                     place-content: center;
+                    z-index: 10;
                     & ul {
                         flex-direction: column;
                         align-items: center;

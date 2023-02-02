@@ -37,6 +37,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #07484A;
   font-size: 16px;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   width: 12px;
@@ -871,6 +872,7 @@ header #burger {
     left: 0;
     display: grid;
     place-content: center;
+    z-index: 10;
   }
   header .main-menu.open ul {
     flex-direction: column;
