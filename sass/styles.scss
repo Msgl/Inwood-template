@@ -802,7 +802,7 @@ header {
         background: url(/assets/images/Header/empty-modern-room-with-furniture-mobile.png) no-repeat;
         background-color: $clr-bg-multipy;
         background-size: cover;
-        background-position: left;
+        background-position: 35%;
         & .content {
             padding-left: 3.375rem;
         }
@@ -1075,6 +1075,7 @@ header {
     .newsletter {
         grid-template-columns: 1fr;
         grid-template-rows: 350px 350px;
+        overflow: hidden;
     }
     .footer {
         grid-template-columns: 1fr 1fr;

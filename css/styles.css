@@ -802,7 +802,7 @@ header #burger {
     background: url(/assets/images/Header/empty-modern-room-with-furniture-mobile.png) no-repeat;
     background-color: #605f5f;
     background-size: cover;
-    background-position: left;
+    background-position: 35%;
   }
   .main-banner .content {
     padding-left: 3.375rem;
@@ -1028,6 +1028,7 @@ header #burger {
   .newsletter {
     grid-template-columns: 1fr;
     grid-template-rows: 350px 350px;
+    overflow: hidden;
   }
   .footer {
     grid-template-columns: 1fr 1fr;
