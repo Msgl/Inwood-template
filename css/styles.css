@@ -948,6 +948,9 @@ header #burger {
   .special-package .content-wrapper .product .primary-image {
     min-height: 350px;
   }
+  .special-package .content-wrapper .product .primary-text .summary {
+    margin: 0 auto;
+  }
   .designed {
     padding: 2.25rem 0;
   }

@@ -970,6 +970,11 @@ header {
                 & .primary-image {
                     min-height: 350px;
                 }
+                & .primary-text {
+                    & .summary {
+                        margin: 0 auto;
+                    }
+                }
             }
         }
     }
