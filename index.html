@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link defer href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <title>Inwood</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/assets/logo/logo.png" alt="logo" width="144">
+        </div>
+        <nav class="main-menu" id="mobile-menu">
+            <ul>
+                <li>
+                    <a href="" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="">Products</a>
+                </li>
+                <li>
+                    <a href="">Categories</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="shop-menu">
+            <ul>
+                <li>
+                    <a href=""><img src="assets/icons/search.png" alt="" width="27" height="27"></a>
+                </li>
+                <li>
+                    <a href=""><img src="/assets/icons/cart.png" alt="" width="27" height="27"></a>
+                </li>
+                <li>
+                    <a href=""><img src="/assets/icons/account.png" alt="" width="27" height="27"></a>
+                </li>
+            </ul>
+        </div>
+        <button id="burger"><img src="/assets/icons/menu.png" alt="open menu" width="20" height="20"></button>
+    </header>
+    <section class="main-banner">
+        <div class="content" data-aos="fade-right">
+            <h1>Exclusive Deals of Furniture Collection</h1>
+            <p>Explore different categories. Find the best deals.</p>
+            <button class="button-large button-variation-1">Shop Now</button>
+        </div>
+    </section>
+    <section class="categories-section">
+        <h2>Explore by Category</h2>
+        <div class="content">
+            <div class="sidebar">
+                <div class="search">
+                    <input type="text" value="Search"></input>
+                </div>
+                <nav class="category-list">
+                    <ul>
+                        <li>
+                            <a href="">Bedroom</a>
+                        </li>
+                        <li>
+                            <a href="">Dinning Room</a>
+                        </li>
+                        <li>
+                            <a href="">Meeting Room</a>
+                        </li>
+                        <li>
+                            <a href="">Workspace</a>
+                        </li>
+                        <li>
+                            <a href="">Living Room</a>
+                        </li>
+                        <li>
+                            <a href="">Kitchen</a>
+                        </li>
+                        <li>
+                            <a href="">Living Space</a>
+                        </li>
+                        <li>
+                            <a href="">Bathroom</a>
+                        </li>
+                        <li>
+                            <a href="">Guest Room</a>
+                        </li>
+                        <li>
+                            <a href="">Playroom</a>
+                        </li>
+                        <li>
+                            <a href="">Outdoors</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="button-variation-1 button-large"><span>All Categories</span><img
+                        src="/assets/icons/arrow-right-light.png" alt=""></button>
+            </div>
+            <div class="category-blocks">
+                <div class="block bedroom" data-aos="fade-up">
+                    <div class="text">
+                        <h3 class="title">Bedroom</h3>
+                        <button class="button-variation-2">Explore</button>
+                    </div>
+                </div>
+                <div class="block workspace" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text">
+                        <h3 class="title">Workspace</h3>
+                        <button class="button-variation-2">Explore</button>
+                    </div>
+                </div>
+                <div class="block kitchen" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text">
+                        <h3 class="title">Kitchen</h3>
+                        <button class="button-variation-2">Explore</button>
+                    </div>
+                </div>
+                <div class="block living-room" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text">
+                        <h3 class="title">Living Room</h3>
+                        <button class="button-variation-2">Explore</button>
+                    </div>
+                </div>
+                <div class="block bathroom" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text">
+                        <h3 class="title">Bathroom</h3>
+                        <button class="button-variation-2">Explore</button>
+                    </div>
+                </div>
+                <div class="block dining-room" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text">
+                        <h3 class="title">Dining Room</h3>
+                        <button class="button-variation-2">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product-slider">
+        <h2>Popular Products</h2>
+        <div class="content">
+            <div class="products">
+                <div class="swiper swiper-main">
+                    <div class="swiper-wrapper">
+                        <div class="slider-product swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="/assets/images/11-chair-png-image 1.png" alt="">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>Armchair</h3>
+                                <p>Light single chair</p>
+                                <p class="price">$145</p>
+                            </div>
+                        </div>
+                        <div class="slider-product swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="/assets/images/48550-2-chair-download-free-hq-image 1.png" alt="">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>Armchair</h3>
+                                <p>Light single chair</p>
+                                <p class="price">$145</p>
+                            </div>
+                        </div>
+                        <div class="slider-product swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="/assets/images/chair 2.png" alt="">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>Armchair</h3>
+                                <p>Light single chair</p>
+                                <p class="price">$145</p>
+                            </div>
+
+                        </div>
+                        <div class="slider-product swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="/assets/images/unnamed 1.png" alt="">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>Armchair</h3>
+                                <p>Light single chair</p>
+                                <p class="price">$145</p>
+                            </div>
+                        </div>
+                        <div class="slider-product swiper-slide">
+                            <div class="image-wrapper">
+                                <img src="/assets/images/chair 2.png" alt="">
+                            </div>
+                            <div class="text-wrapper">
+                                <h3>Armchair</h3>
+                                <p>Light single chair</p>
+                                <p class="price">$145</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+            </div>
+            <button class="button-variation-1" data-aos="fade-up"><span>All Categories</span><img
+                    src="/assets/icons/arrow-right-light.png" alt=""></button>
+        </div>
+
+    </section>
+    <section class="special-package">
+        <h2>Special Package</h2>
+        <div class="content-wrapper">
+            <div class="product" data-aos="zoom-in-right">
+                <div class="primary-image">
+                    <img src="" alt="">
+                </div>
+                <div class="primary-text">
+                    <div class="summary">
+                        <h3>Larking Wood Full Set</h3>
+                        <div class="stars">
+                            <img src="/assets/icons/stars.png" alt="">
+                        </div>
+                        <p class="price">$729.99</p>
+                    </div>
+                    <button class="button-variation-1">Add to Cart</button>
+                </div>
+            </div>
+            <div class="information">
+                <h4>Description</h4>
+                <p>Cast Aluminum Outdoor Chaise Lounge As an elegant and classic touch to your outdoor space, this cast
+                    Aluminum Chaise Lounge combines the appearance, function and quality all together, offering you with
+                    the
+                    best experience.</p>
+                <div class="related-grid">
+                    <div class="related-product" data-aos="flip-right">
+                        <div class="image">
+                            <img src="/assets/images/48550-2-chair-download-free-hq-image 1.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h5>Living Room Family Set</h5>
+                            <p class="price">$229.99</p>
+                        </div>
+                        <div class="stars">
+                            <img src="/assets/icons/stars.png" alt="">
+                        </div>
+                        <button class="button-variation-2">See More</button>
+                    </div>
+                    <div class="related-product" data-aos="flip-right" data-aos-delay="100">
+                        <div class="image">
+                            <img src="/assets/images/chair 2.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h5>Living Special Set</h5>
+                            <p class="price">$429.99</p>
+                        </div>
+                        <div class="stars">
+                            <img src="/assets/icons/stars.png" alt="">
+                        </div>
+                        <button class="button-variation-2">See More</button>
+                    </div>
+                    <div class="related-product" data-aos="flip-right" data-aos-delay="200">
+                        <div class="image">
+                            <img src="/assets/images/unnamed 1.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h5>Kitchen Set</h5>
+                            <p class="price">$154.99</p>
+                        </div>
+                        <div class="stars">
+                            <img src="/assets/icons/stars.png" alt="">
+                        </div>
+                        <button class="button-variation-2">See More</button>
+                    </div>
+                    <div class="related-product" data-aos="flip-right" data-aos-delay="300">
+                        <div class="image">
+                            <img src="/assets/images/11-chair-png-image 1.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h5>Bedroom Set</h5>
+                            <p class="price">$129.99</p>
+                        </div>
+                        <div class="stars">
+                            <img src="/assets/icons/stars.png" alt="">
+                        </div>
+                        <button class="button-variation-2">See More</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="designed">
+        <div class="main-box">
+            <h3>Our<br>Own Creation</h3>
+            <p>Meet the designers</p>
+            <button class="button-variation-3">Join our Team</button>
+        </div>
+        <div class="designers-boxes">
+            <div class="box" data-aos="fade-up">
+                <img src="/assets/images/Team/close-up-studio-view-cheerful-young-woman-with-healthy-freckled-skin-blue-eyes-min.jpg"
+                    alt="">
+                <button class="button-variation-1">Daniella Nicholls</button>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="200">
+                <img src="/assets/images/Team/attractive-mixed-race-male-with-positive-smile-shows-white-teeth-keeps-hands-stomach-being-high-spir.webp"
+                    alt="">
+                <button class="button-variation-1">Tony Sen</button>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="400">
+                <img src="/assets/images/Team/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxi.webp"
+                    alt="">
+                <button class="button-variation-1">Melissa Nairn</button>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
+                <img src="/assets/images/Team/happy-man-with-long-thick-ginger-beard-has-friendly-smile-min.webp"
+                    alt="">
+                <button class="button-variation-1">Kalan Briggs</button>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="800">
+                <img src="/assets/images/Team/positive-human-emotions-headshot-happy-emotional-teenage-girl-with-bob-haircut-laughing-from-bottom-.webp"
+                    alt="">
+                <button class="button-variation-1">Chiara Reid</button>
+            </div>
+        </div>
+    </section>
+    <section class="benefits">
+        <h2>Benefits for your expediency</h2>
+        <div class="content">
+            <div class="box" data-aos="fade-up">
+                <div class="image">
+                    <img src="/assets/icons/payment.png" alt="">
+                </div>
+
+                <h3>Payment Method</h3>
+                <p>We offer flexible payment options, to make easier.</p>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <div class="image">
+                    <img src="/assets/icons/return.png" alt="">
+                </div>
+                <h3>Return Policy</h3>
+                <p>You can return a product within 30 days.</p>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <div class="image">
+                    <img src="/assets/icons/customer-service.png" alt="">
+                </div>
+
+                <h3>Customer Support</h3>
+                <p>Our customer support is 24/7.</p>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <h3>Over 15,000 happy customers.</h3>
+        <div class="content">
+            <div class="swiper swiper-testimonials">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-item">
+                        <div class="image">
+                            <img src="/assets/images/11-chair-png-image 1.png" alt="">
+                        </div>
+
+                        <div class="text">
+                            <blockquote>
+                                “My experience with Mark is a complete
+                                sucess, from customer service, wide range of
+                                products, clean store, purchasing experience, the
+                                newsletter.Thank you.”
+                            </blockquote>
+                            <div class="attribution">
+                                <p class="person">
+                                    Leona Paul
+                                </p>
+                                <p class="position">
+                                    CEO of Floatcom
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="" alt="">
+                        <blockquote>
+                            “My experience with Mark is a complete
+                            sucess, from customer service, wide range of
+                            products, clean store, purchasing experience, the
+                            newsletter.Thank you.”
+                        </blockquote>
+                        <p class="person">
+                            Leona Paul
+                        </p>
+                        <p class="position">
+                            CEO of Floatcom
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="" alt="">
+                        <blockquote>
+                            “My experience with Mark is a complete
+                            sucess, from customer service, wide range of
+                            products, clean store, purchasing experience, the
+                            newsletter.Thank you.”
+                        </blockquote>
+                        <p class="person">
+                            Leona Paul
+                        </p>
+                        <p class="position">
+                            CEO of Floatcom
+                        </p>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="navigation">
+                    <div class="swiper-scrollbar"></div>
+                    <button class="button-variation-3">See all reviews</button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="newsletter">
+        <div class="image" data-aos="fade-right">
+            <img src="/assets/images/newsletter-image.jpg" alt="newsletter graphic">
+        </div>
+        <div class="content" data-aos="fade-left">
+            <h2>Join Our <span class="bold">Newsletter</span></h2>
+            <p>Receive exclusive deals, discounts and many offers.</p>
+            <form action="" class="subscription">
+                <input type="email" value="Enter your email">
+                <button type="submit" class="button-variation-1 button ">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="address">
+            <div class="logo">
+                <img src="/assets/logo/logo.png" alt="">
+            </div>
+            <div class="social-media">
+                <a href=""><img src="/assets/icons/facebook.png" alt="facebook"></a>
+                <a href=""><img src="/assets/icons/instagram.png" alt="instagram"></a>
+                <a href=""><img src="/assets/icons/linkedin.png" alt="linkedin"></a>
+                <a href=""><img src="assets/icons/behance.png" alt="behance"></a>
+                <a href=""><img src="/assets/icons/twitter.png" alt="twitter"></a>
+            </div>
+        </div>
+
+        <div class="account">
+            <h2>My Account</h2>
+            <nav>
+                <ul>
+                    <li><a href="">Sign In</a></li>
+                    <li><a href="">Register</a></li>
+                    <li><a href="">Order Status</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="help">
+            <h2>Help</h2>
+            <nav>
+                <ul>
+                    <li><a href="">Shipping</a></li>
+                    <li><a href="">Returns</a></li>
+                    <li><a href="">Sizing</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="shop">
+            <h2>Shop</h2>
+            <nav>
+                <ul>
+                    <li><a href="">All Products</a></li>
+                    <li><a href="">Bedroom</a></li>
+                    <li><a href="">Dining Room</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="legal">
+            <h2>Legal</h2>
+            <nav>
+                <ul>
+                    <li><a href="">Shipping & Delivery</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <div class="copyright">
+        <button class="button-variation-1" id="attributions">See Attributions</button>
+        <div id="attributions-wrapper">
+            <div>
+                <h3>UI Template</h3>
+                <a class="button-variation-2"
+                    href="https://www.behance.net/gallery/109915919/UX-Case-Study-Furniture-eCommerce-Website">by AI
+                    Razi Siam</a>
+            </div>
+            <div>
+                <h3>Header</h3>
+                Image by <a class="button-variation-2"
+                    href="https://www.freepik.com/free-photo/empty-modern-room-with-furniture_20521138.htm#page=6&query=furniture&position=6&from_view=search&track=sph">Freepik</a>
+            </div>
+            <div>
+                <h3>Team Photos</h3>
+                <a class="button-variation-2"
+                    href="https://www.freepik.com/free-photo/happy-man-with-long-thick-ginger-beard-has-friendly-smile_10518238.htm#&position=28&from_view=author">Image
+                    by wayhomestudio</a> on Freepik <br>
+                <a class="button-variation-2"
+                    href="https://www.freepik.com/free-photo/attractive-mixed-race-male-with-positive-smile-shows-white-teeth-keeps-hands-stomach-being-high-spirit-wears-white-shirt-rejoices-positive-moments-life-people-emotions-concept_10420306.htm#&position=42&from_view=author">Image
+                    by wayhomestudio</a> on Freepik <br>
+                <a class="button-variation-2"
+                    href="https://www.freepik.com/free-photo/positive-human-emotions-headshot-happy-emotional-teenage-girl-with-bob-haircut-laughing-from-bottom-her-heart-keeping-eyes-closed-showing-perfect-white-teeth-while-having-fun-indoors_9760159.htm#&position=25&from_view=author">Image
+                    by wayhomestudio</a> on Freepik <br>
+                <a class="button-variation-2"
+                    href="https://www.freepik.com/free-photo/close-up-studio-view-cheerful-young-woman-with-healthy-freckled-skin-blue-eyes_10272302.htm#page=8&position=21&from_view=author">Image
+                    by wayhomestudio</a> on Freepik <br>
+                <a class="button-variation-2"
+                    href="https://www.freepik.com/free-photo/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university_9440600.htm#&position=22&from_view=author">Image
+                    by wayhomestudio</a> on Freepik <br>
+            </div>
+            <div>
+                <h3>Category Photos</h3>
+                <a class="button-variation-2"
+                    href="https://www.freepik.com/free-photo/comfortable-pillow-bed_3531618.htm#from_view=detail_alsolike">Image
+                    by lifeforstock</a> on Freepik <br>
+                Image by <a class="button-variation-2"
+                    href="https://www.freepik.com/free-photo/stylish-minimalistic-kitchen-with-plants_10143100.htm#query=kitchen%20room%20minimal&position=16&from_view=search&track=ais">Freepik</a>
+                <br>
+                Image by <a class="button-variation-2"
+                    href="https://www.freepik.com/free-photo/interior-design-with-photoframes-couch_25811406.htm#query=living%20room&position=2&from_view=search&track=sph">Freepik</a>
+                <br>
+            </div>
+            <div>
+                <h3>Newsletter</h3>
+                Newsletter
+                Image by <a class="button-variation-2"
+                    href="https://www.freepik.com/free-vector/new-message-concept-landing-page_5777076.htm#query=newsletter&position=4&from_view=search&track=sph">Freepik
+                </a>
+            </div>
+        </div>
+
+        <p> Copyright ©2020 INWOOD. All Rights Reserved</p>
+    </div>
+    <script src="/js/scripts.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 150,
+            once: true
+        });
+    </script>
+</body>
+
+</html>

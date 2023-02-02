@@ -1,0 +1,1121 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font-size: inherit;
+  color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #07484A;
+  font-size: 16px;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #F0F0F0;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #70908B;
+  border: 3px solid #70908B;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #07484A;
+  border: 3px solid white;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #70908B;
+  border: 5px solid #70908B;
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  background-image: url(/assets/icons/arrow-left.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 45px !important;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next {
+  background-image: url(/assets/icons/arrow-right.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 45px !important;
+}
+.swiper-button-next::after {
+  display: none;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h1, h2 {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #07484A;
+}
+
+input {
+  color: #07484A;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  border-radius: 10px;
+  border-style: solid;
+  font-family: inherit;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.button-large {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+}
+
+.button-variation-1 {
+  background-color: #70908B;
+  border-color: #70908B;
+  color: #fff;
+}
+
+.button-variation-2 {
+  background-color: #E0EFF6;
+  border-color: #E0EFF6;
+  color: #07484A;
+}
+
+.button-variation-3 {
+  background-color: #FDFBF8;
+  border-color: #FDFBF8;
+  color: #07484A;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 0 9.375rem;
+  background-color: #cdcdcd;
+  min-height: 100px;
+}
+header .logo {
+  flex: 0.2;
+}
+header .main-menu {
+  flex: 1;
+}
+header .main-menu ul {
+  display: flex;
+  max-width: 600px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+header .main-menu ul a {
+  font-size: 1.25rem;
+}
+header .main-menu ul a.active {
+  font-weight: 600;
+  text-decoration: underline;
+}
+header .shop-menu {
+  flex: 0.2;
+}
+header .shop-menu ul {
+  display: flex;
+  justify-content: space-between;
+}
+header #burger {
+  display: none;
+}
+
+.main-banner {
+  background: url(/assets/images/Header/empty-modern-room-with-furniture.jpg) no-repeat;
+  background-color: #605f5f;
+  background-size: cover;
+  background-position: right;
+  height: 86vh;
+  max-height: 1080px;
+  border-bottom-left-radius: 64px;
+  border-bottom-right-radius: 64px;
+  display: flex;
+  align-items: center;
+}
+.main-banner .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 54px;
+  padding-left: 9.375rem;
+  max-width: 800px;
+}
+.main-banner button {
+  font-weight: 600;
+}
+
+.categories-section {
+  padding: 6.25rem 9.375rem 3.125rem;
+}
+.categories-section h2 {
+  text-align: center;
+}
+.categories-section .content {
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding: 6.25rem 0;
+}
+.categories-section .content .sidebar {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.categories-section .content .sidebar .search input {
+  background-color: #F0F0F0;
+  border-color: #F0F0F0;
+  border-style: dotted;
+  border-radius: 10px;
+  color: #6E757E;
+  font-size: 1.24rem;
+  padding-left: 60px;
+  min-height: 75px;
+  width: 100%;
+  background-image: url(/assets/icons/search-input.png);
+  background-repeat: no-repeat;
+  background-size: 1.4rem;
+  background-position: 30px;
+  cursor: pointer;
+}
+.categories-section .content .sidebar .search input:focus-visible {
+  outline: 2px solid black;
+}
+.categories-section .content .sidebar .category-list {
+  padding-left: 30px;
+  max-height: 400px;
+  overflow: auto;
+}
+.categories-section .content .sidebar .category-list a {
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+.categories-section .content .sidebar button {
+  font-size: 1.125rem;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.categories-section .content .sidebar button img {
+  padding-top: 5px;
+}
+.categories-section .content .category-blocks {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  grid-template-rows: repeat(3, 450px);
+}
+.categories-section .content .category-blocks .block {
+  background-color: #6E757E;
+  border-radius: 10px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  transition: all 0.6s ease-in-out;
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: multiply;
+}
+.categories-section .content .category-blocks .block .text {
+  display: none;
+}
+.categories-section .content .category-blocks .block.bedroom {
+  background: url(/assets/images/Category/comfortable-pillow-bed.jpg) no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: multiply;
+}
+.categories-section .content .category-blocks .block.workspace {
+  background: url(/assets/images/Category/comfortable-pillow-bed.jpg) no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: multiply;
+}
+.categories-section .content .category-blocks .block.kitchen {
+  background: url(/assets/images/Category/stylish-minimalistic-kitchen-with-plants.jpg) no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: multiply;
+}
+.categories-section .content .category-blocks .block.living-room {
+  background: url(/assets/images/Category/interior-design-with-photoframes-couch.jpg) no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: multiply;
+}
+.categories-section .content .category-blocks .block.bathroom {
+  background: url(/assets/images/Category/comfortable-pillow-bed.jpg) no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: multiply;
+}
+.categories-section .content .category-blocks .block.dining-room {
+  background: url(/assets/images/Category/comfortable-pillow-bed.jpg) no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-blend-mode: multiply;
+}
+.categories-section .content .category-blocks .block:hover {
+  background-color: #605f5f;
+}
+.categories-section .content .category-blocks .block:hover .text {
+  display: block;
+}
+.categories-section .content .category-blocks .block h3 {
+  color: #FDFBF8;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.product-slider {
+  background-image: url(/assets/images/Image-container.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+}
+.product-slider h2 {
+  text-align: center;
+}
+.product-slider .content {
+  padding-left: 12vw;
+  height: 92%;
+  padding-top: 100px;
+}
+.product-slider .content .products .swiper .swiper-wrapper {
+  padding-bottom: 40px;
+}
+.product-slider .content .products .slider-product {
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.product-slider .content .products .slider-product:nth-child(n) {
+  background-color: #CAF3E5;
+}
+.product-slider .content .products .slider-product:nth-child(2n) {
+  background-color: #E0EFF6;
+}
+.product-slider .content .products .slider-product:nth-child(3n) {
+  background-color: #EEEBFF;
+}
+.product-slider .content .products .slider-product:nth-child(4n) {
+  background-color: #FFF4E7;
+}
+.product-slider .content .products .slider-product .image-wrapper {
+  flex: 0.7;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+}
+.product-slider .content .products .slider-product .text-wrapper {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.product-slider .content .products .slider-product .text-wrapper h3 {
+  font-size: 1.5rem;
+}
+.product-slider .content .products .slider-product .text-wrapper p {
+  font-size: 1.125rem;
+}
+.product-slider .content .products .slider-product .text-wrapper p.price {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.product-slider .content button {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.product-slider .content button img {
+  padding-top: 9px;
+}
+
+.special-package {
+  padding: 3.125rem 9.375rem;
+}
+.special-package h2 {
+  text-align: center;
+}
+.special-package .content-wrapper {
+  display: flex;
+  gap: 50px;
+  padding-top: 50px;
+}
+.special-package .content-wrapper .product {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: space-between;
+}
+.special-package .content-wrapper .product .primary-image {
+  flex: 1;
+  background-color: #EEEBFF;
+  border-radius: 16px;
+}
+.special-package .content-wrapper .product .primary-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.special-package .content-wrapper .product .primary-text .summary {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.special-package .content-wrapper .product .primary-text .summary .stars {
+  max-width: 100px;
+}
+.special-package .content-wrapper .product .primary-text h3 {
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+.special-package .content-wrapper .product .primary-text p.price {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.special-package .content-wrapper .information {
+  flex: 0.5;
+  color: #07484A;
+}
+.special-package .content-wrapper .information h4 {
+  padding-bottom: 10px;
+}
+.special-package .content-wrapper .information h5 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  padding-bottom: 10px;
+}
+.special-package .content-wrapper .information p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-align: justify;
+}
+.special-package .content-wrapper .information .related-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-top: 50px;
+}
+.special-package .content-wrapper .information .related-grid .related-product {
+  background-color: rgba(240, 240, 240, 0.4705882353);
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 20px;
+  justify-items: start;
+}
+.special-package .content-wrapper .information .related-grid .related-product .image {
+  grid-row: 1/4;
+}
+.special-package .content-wrapper .information .related-grid .related-product .image img {
+  max-width: 130px;
+  max-height: 130px;
+}
+.special-package .content-wrapper .information .related-grid .related-product .stars img {
+  max-width: 100px;
+}
+.special-package .content-wrapper .information .related-grid .related-product p.price {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.designed {
+  display: flex;
+  min-height: 500px;
+  padding: 6.25rem 0;
+}
+.designed .main-box {
+  flex: 0.2;
+  background-color: #70908B;
+  display: grid;
+  justify-content: center;
+  align-content: space-evenly;
+  padding: 20px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  color: #FDFBF8;
+}
+.designed .main-box h3 {
+  font-size: 2rem;
+}
+.designed .designers-boxes {
+  display: flex;
+  flex: 0.8;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.designed .designers-boxes .box {
+  background-color: rgba(240, 240, 240, 0.4705882353);
+  display: grid;
+  place-content: center;
+  border-radius: 16px;
+  width: 19%;
+  row-gap: 10px;
+}
+.designed .designers-boxes .box img {
+  border-radius: 16px;
+}
+
+.benefits {
+  background-color: #E0EFF6;
+  padding: 6.25rem 9.375rem;
+}
+.benefits h2 {
+  text-align: center;
+  padding-bottom: 6.25rem;
+}
+.benefits .content {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  min-height: 300px;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+}
+.benefits .content .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.benefits .content .box:first-child .image {
+  background-color: #EEEBFF;
+}
+.benefits .content .box:nth-child(2) .image {
+  background-color: #FFF4E7;
+}
+.benefits .content .box:nth-child(3) .image {
+  background-color: #CAF3E5;
+}
+.benefits .content .box .image {
+  display: flex;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 24px;
+  align-items: center;
+}
+.benefits .content .box .image img {
+  max-width: 70px;
+  max-height: 70px;
+}
+.benefits .content .box h3 {
+  font-size: 2rem;
+}
+.benefits .content .box p {
+  font-size: 1.25rem;
+}
+
+.testimonials {
+  padding: 3.125rem 9.375rem;
+}
+.testimonials h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.testimonials h3 {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.testimonials .content {
+  padding-top: 4.6875rem;
+}
+.testimonials .content .swiper-wrapper {
+  padding-bottom: 40px;
+}
+.testimonials .content .navigation {
+  display: flex;
+  position: relative;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.testimonials .content .navigation .swiper-scrollbar {
+  flex: 1;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+.testimonials .content .navigation button {
+  flex: 0.2;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.testimonials .content .testimonial-item {
+  display: flex;
+}
+.testimonials .content .testimonial-item .image {
+  flex: 0.3;
+  display: grid;
+  place-content: center;
+  margin-left: 5vw;
+}
+.testimonials .content .testimonial-item .text {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+}
+.testimonials .content .testimonial-item .text blockquote {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  padding-right: 40px;
+  text-align: justify;
+  margin-right: 5vw;
+}
+.testimonials .content .testimonial-item .text .attribution p {
+  font-size: 1.3rem;
+}
+.testimonials .content .testimonial-item .text .attribution p.person {
+  font-weight: 600;
+}
+.testimonials .content .testimonial-item .text .attribution p.position {
+  font-size: 1.2rem;
+}
+
+.newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+.newsletter .image {
+  display: flex;
+  align-items: center;
+}
+.newsletter .content {
+  background-color: #CAF3E5;
+  padding: 4rem;
+  display: grid;
+}
+.newsletter .content h2 {
+  font-weight: 400;
+}
+.newsletter .content h2 span.bold {
+  font-weight: 600;
+  display: block;
+}
+.newsletter .content p {
+  font-size: 1.5rem;
+}
+.newsletter .content form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 250px;
+}
+.newsletter .content form input {
+  height: 44px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.newsletter .content form button {
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  padding: 6.25rem 9.375rem;
+}
+.footer h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 20px;
+}
+.footer li {
+  line-height: 2.5;
+}
+.footer .address {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.footer .address .social-media {
+  display: flex;
+  gap: 15px;
+}
+.footer .address .social-media a img {
+  max-width: 30px;
+}
+
+.copyright {
+  padding: 20px 9.375rem;
+}
+.copyright a {
+  padding: 5px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.copyright p {
+  font-size: 1rem;
+}
+.copyright #attributions {
+  margin-bottom: 20px;
+}
+.copyright #attributions-wrapper {
+  display: none;
+}
+.copyright #attributions-wrapper.attributionOpen {
+  display: block;
+}
+
+@media only screen and (max-width: 1440px) {
+  header {
+    padding: 0 3.375rem;
+  }
+  .main-banner .content {
+    padding-left: 3.375rem;
+  }
+  .special-package .content-wrapper {
+    flex-direction: column;
+  }
+  .special-package .content-wrapper .product {
+    flex-direction: row;
+    gap: 20px;
+    min-height: 50vh;
+  }
+  .special-package .content-wrapper .product .primary-text {
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .special-package .content-wrapper .information .related-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .special-package .content-wrapper .information .related-grid .related-product {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .special-package .content-wrapper .information h4 {
+    text-align: center;
+  }
+  .special-package .content-wrapper .information h5 {
+    text-align: center;
+  }
+  .special-package .content-wrapper .information p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .main-banner .content {
+    max-width: 50%;
+    gap: 25px;
+  }
+  .categories-section {
+    padding: 6.25rem 3.375rem 3.125rem;
+  }
+  .special-package {
+    padding: 6.25rem 3.375rem 3.125rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  header {
+    padding: 20px 2.375rem;
+  }
+  .main-banner {
+    background: url(/assets/images/Header/empty-modern-room-with-furniture-mobile.png) no-repeat;
+    background-color: #605f5f;
+    background-size: cover;
+    background-position: left;
+  }
+  .main-banner .content {
+    padding-left: 3.375rem;
+  }
+  .categories-section .content .category-blocks {
+    grid-template-rows: repeat(3, 250px);
+  }
+  .categories-section .content .category-blocks .block h3 {
+    font-size: 3rem;
+  }
+  .designed {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .designed .main-box {
+    max-width: 85%;
+    padding: 35px;
+    gap: 20px;
+  }
+  .designed .designers-boxes {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .designed .designers-boxes .box {
+    width: 30%;
+  }
+  .testimonials {
+    padding: 3.125rem 3.375rem;
+  }
+  .footer {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 3.25rem 2.375rem;
+  }
+  .copyright {
+    padding: 20px 2.375rem;
+  }
+}
+@media only screen and (max-width: 980px) {
+  h1, h2 {
+    font-size: 3rem;
+  }
+  .button-large {
+    padding: 20px 22px;
+    font-size: 1.2rem;
+  }
+  header {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  header .logo {
+    flex: 1;
+  }
+  header .shop-menu {
+    flex: 0.5;
+  }
+  header .main-menu {
+    display: none;
+    position: absolute;
+  }
+  header .main-menu.open {
+    display: block;
+    background-color: #cdcdcd;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    display: grid;
+    place-content: center;
+  }
+  header .main-menu.open ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .main-menu.open ul li {
+    line-height: 3.5rem;
+  }
+  header #burger {
+    display: block;
+    border-color: transparent;
+    background-color: transparent;
+    z-index: 100;
+  }
+  .benefits .content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .special-package .content-wrapper .product .primary-text {
+    flex: 0.6;
+  }
+  .special-package .content-wrapper .information .related-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .categories-section {
+    padding: 6.25rem 2.375rem 3.125rem;
+  }
+  .categories-section .content {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .categories-section .content .sidebar .search input {
+    padding-left: 62px;
+    min-height: 54px;
+    background-size: 1.2rem;
+  }
+  .categories-section .content .sidebar .category-list {
+    padding-left: 0;
+  }
+  .categories-section .content .sidebar button {
+    font-size: 1rem;
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  .categories-section .content .category-blocks .block h3 {
+    font-size: 2.2rem;
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px -webkit-max-content;
+    grid-template-rows: 150px max-content;
+    gap: 50px;
+  }
+  .footer .address {
+    grid-column: 1/5;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main-banner {
+    height: 75vh;
+  }
+  .main-banner .content {
+    padding: 3rem;
+    gap: 40px;
+    max-width: 90%;
+  }
+  .special-package {
+    padding: 3rem;
+  }
+  .special-package .content-wrapper .product {
+    flex-direction: column;
+  }
+  .special-package .content-wrapper .product .primary-image {
+    min-height: 350px;
+  }
+  .designed {
+    padding: 2.25rem 0;
+  }
+  .designed .designers-boxes .box {
+    width: 45%;
+  }
+  .categories-section .content {
+    flex-direction: column;
+    padding: 2.25rem 0;
+    row-gap: 50px;
+  }
+  .categories-section .content .sidebar {
+    row-gap: 20px;
+    align-items: center;
+  }
+  .categories-section .content .sidebar .category-list {
+    overflow: visible;
+    -moz-column-count: 4;
+         column-count: 4;
+    text-align: center;
+  }
+  .benefits {
+    padding: 4.25rem 2.5rem;
+  }
+  .benefits h2 {
+    padding-bottom: 3.25rem;
+  }
+  .benefits .content .box {
+    gap: 5px;
+  }
+  .testimonials .content .testimonial-item .text {
+    flex: 0.5;
+  }
+  .testimonials .content .testimonial-item .text blockquote {
+    font-size: 1rem;
+    line-height: 1.2;
+    padding-right: 0;
+    text-align: start;
+    margin-right: 0;
+  }
+  .testimonials .content .testimonial-item .image {
+    flex: 0.5;
+  }
+  .testimonials .content .navigation {
+    justify-content: space-between;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .testimonials .content .navigation .swiper-scrollbar {
+    flex: 0.7;
+  }
+  .testimonials .content .navigation button {
+    flex: 0.3;
+  }
+  .newsletter {
+    min-height: 400px;
+  }
+  .newsletter .content {
+    padding: 2rem;
+    align-content: space-evenly;
+  }
+  .newsletter .content p {
+    font-size: 1.2rem;
+  }
+  .footer {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .special-package .content-wrapper .information .related-grid .related-product {
+    padding: 15px;
+    gap: 15px;
+  }
+  .special-package .content-wrapper .information .related-grid .related-product .image img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .newsletter {
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px 350px;
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 14px;
+  }
+  .footer .address {
+    grid-column: 1/3;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (max-width: 450px) {
+  h1, h2 {
+    font-size: 2.3rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .categories-section .content .sidebar .category-list {
+    display: none;
+  }
+  .categories-section .content .category-blocks {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 220px);
+  }
+  .special-package .content-wrapper .information .related-grid {
+    grid-template-columns: 1fr;
+  }
+  .special-package .content-wrapper .product .primary-text h3 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .special-package .content-wrapper .product .primary-text .summary {
+    align-items: center;
+  }
+  .special-package .content-wrapper .product .primary-text .summary h3 {
+    text-align: center;
+  }
+  .special-package .content-wrapper .product .primary-text .summary p.price {
+    font-size: 1.25rem;
+  }
+  .special-package .content-wrapper .product .primary-text button {
+    margin: 10px auto;
+  }
+  .designed .designers-boxes .box {
+    min-height: 230px;
+  }
+  .benefits .content .box h3 {
+    font-size: 1.4rem;
+  }
+  .benefits .content .box p {
+    font-size: 1rem;
+  }
+  .testimonials {
+    padding: 3.125rem 1.375rem;
+  }
+  .testimonials h3 {
+    font-size: 1.5rem;
+  }
+  .testimonials .content .testimonial-item {
+    flex-direction: column;
+  }
+  .testimonials .content .testimonial-item .text blockquote {
+    text-align: center;
+  }
+  .testimonials .content .testimonial-item .text .attribution p.person {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .testimonials .content .testimonial-item .text .attribution p.position {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .testimonials .content .navigation button {
+    flex: 0.5;
+    font-size: 1rem;
+  }
+  .testimonials .swiper-button-next {
+    top: 41%;
+  }
+  .testimonials .swiper-button-prev {
+    top: 41%;
+  }
+  .footer h2 {
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+  }
+  .footer li {
+    line-height: 2;
+  }
+  .copyright p {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

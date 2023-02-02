@@ -1,0 +1,1207 @@
+@import "reset.scss";
+@import "variables.scss";
+
+// layout 
+$padding-x-axis: 9.375rem;
+$padding-y-axis: 6.25rem;
+
+
+
+body {
+    font-family: $primary-font;
+    color: $clr-main-dark;
+    font-size: 16px;
+    &::-webkit-scrollbar {
+        width: 12px;
+        &-track {
+            background: $clr-light-gray;
+        }
+        &-thumb {
+            border-radius: 10px;
+            background-color: $clr-main-light;
+            border: 3px solid $clr-main-light;
+        }
+    }
+
+}
+// custom scrollbar for divs
+::-webkit-scrollbar {
+    width: 7px;
+    &-track {
+        background: $clr-main-dark;
+        border: 3px solid white;
+    }
+    &-thumb {
+        border-radius: 10px;
+        background-color: $clr-main-light;
+        border: 5px solid $clr-main-light;
+        cursor: pointer;
+    }
+}
+// swiper 
+.swiper-button-prev  {
+    background-image: url(/assets/icons/arrow-left.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 45px!important;
+    &::after {
+        display: none;
+    }
+}
+.swiper-button-next  {
+    background-image: url(/assets/icons/arrow-right.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    width: 45px!important;
+    &::after {
+        display: none;
+    }
+}
+
+
+h1, h2, h3 {
+ font-family: $accent-font;
+}
+h1, h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+p {
+    font-size: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: $clr-main-dark;
+}
+
+input {
+    color: $clr-main-dark;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    border-radius: 10px;
+    border-style: solid;
+    font-family: inherit;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.button-large {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+}
+
+.button-variation-1 {
+    background-color: $clr-main-light;
+    border-color: $clr-main-light;
+    color: $clr-white;
+}
+.button-variation-2 {
+    background-color: $clr-light-blue;
+    border-color:  $clr-light-blue;
+    color: $clr-main-dark;
+}
+.button-variation-3 {
+    background-color: $clr-light-beige;
+    border-color:  $clr-light-beige;
+    color: $clr-main-dark;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 0 $padding-x-axis;
+    background-color: $clr-bg-header;
+    min-height: 100px;
+    & .logo {
+        flex: 0.2;
+    }
+    & .main-menu {
+        flex: 1;
+        & ul {
+            display: flex;
+            max-width: 600px;
+            justify-content: space-between;
+            margin: 0 auto;
+            & a {
+                font-size: 1.25rem;
+                &.active {
+                    font-weight: 600;
+                    text-decoration: underline;
+                    
+                }
+            }
+        }
+    }
+    & .shop-menu {
+        flex: 0.2;
+        & ul {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    & #burger {
+        display: none;
+    }
+}
+
+.main-banner {
+    background: url(/assets/images/Header/empty-modern-room-with-furniture.jpg) no-repeat;
+    background-color: $clr-bg-multipy;
+    background-size: cover;
+    background-position: right;
+    height: 86vh;
+    max-height: 1080px;
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+    display: flex;
+    align-items: center;
+    & .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 54px;
+        padding-left: $padding-x-axis;
+        max-width: 800px;
+    }
+    & button {
+        font-weight: 600;
+    }
+}
+
+.categories-section {
+    padding: $padding-y-axis $padding-x-axis $padding-y-axis/2;
+    & h2 {
+        text-align: center;
+    }
+    & .content {
+        display: flex;
+        column-gap: 50px;
+        padding: $padding-y-axis 0;
+        & .sidebar {
+            flex: 0.3;
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+            & .search {
+                & input {
+                    background-color: $clr-light-gray;
+                    border-color: $clr-light-gray;
+                    border-style: dotted;
+                    border-radius: 10px;
+                    color: $clr-dark-gray;
+                    font-size: 1.24rem;
+                    padding-left: 60px;
+                    min-height: 75px;
+                    width: 100%;
+                    background-image: url(/assets/icons/search-input.png);
+                    background-repeat: no-repeat;
+                    background-size: 1.4rem;
+                    background-position: 30px;
+                    cursor: pointer;
+                    &:focus-visible {
+                        outline: 2px solid black;
+                        // todo
+                    }
+                }
+            }
+            & .category-list {
+                padding-left: 30px;
+                max-height: 400px;
+                overflow: auto;
+                & a {
+                    font-size: 1.2rem;
+                    line-height: 3rem;
+                }
+            }
+            & button {
+                font-size: 1.125rem;
+                display: flex;
+                column-gap: 10px;
+                & img {
+                    padding-top: 5px;
+                }
+            }
+        }
+        
+      & .category-blocks {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+        grid-template-rows: repeat(3, 450px);
+        & .block {
+            background-color: $clr-dark-gray;
+            border-radius: 10px;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            transition: all 0.6s ease-in-out;
+            & .text {
+                display: none;
+            }
+            &.bedroom{
+                background: url(/assets/images/Category/comfortable-pillow-bed.jpg) no-repeat;
+                background-size: cover;
+                background-position: right;
+                background-blend-mode: multiply;
+            }
+            &.workspace{
+                background: url(/assets/images/Category/comfortable-pillow-bed.jpg) no-repeat;
+                background-size: cover;
+                background-position: right;
+                background-blend-mode: multiply;
+            }
+            &.kitchen{
+                background: url(/assets/images/Category/stylish-minimalistic-kitchen-with-plants.jpg) no-repeat;
+                background-size: cover;
+                background-position: right;
+                background-blend-mode: multiply;
+            }
+            &.living-room{
+                background: url(/assets/images/Category/interior-design-with-photoframes-couch.jpg) no-repeat;
+                background-size: cover;
+                background-position: right;
+                background-blend-mode: multiply;
+            }
+            &.bathroom {
+                background: url(/assets/images/Category/comfortable-pillow-bed.jpg) no-repeat;
+                background-size: cover;
+                background-position: right;
+                background-blend-mode: multiply;
+            }
+            &.dining-room {
+                background: url(/assets/images/Category/comfortable-pillow-bed.jpg) no-repeat;
+                background-size: cover;
+                background-position: right;
+                background-blend-mode: multiply;
+            }
+            background-size: cover;
+            background-position: right;
+            background-blend-mode: multiply;
+            &:hover {
+                background-color: $clr-bg-multipy;
+                & .text {
+                    display: block;
+                }
+            }
+          & h3 {
+            color: $clr-light-beige;
+            font-weight: 400;
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+}
+
+.product-slider {
+    background-image: url(/assets/images/Image-container.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    & h2 {
+        text-align: center;
+    }
+    & .content {
+        padding-left: 12vw;
+        height: 92%;
+        padding-top: 100px;
+        & .products {
+            & .swiper {
+                & .swiper-wrapper {
+                    padding-bottom: 40px;
+                }
+            }
+            & .slider-product {
+                // height: 550px;
+                border-radius: 16px;
+                padding: 40px;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-around;
+                &:nth-child(n) {
+                    background-color: $clr-light-green;
+                 }
+                 &:nth-child(2n) {
+                    background-color: $clr-light-blue;
+                 }
+                 &:nth-child(3n) {
+                    background-color: $clr-light-pink;
+                 }
+                 &:nth-child(4n) {
+                    background-color: $clr-light-yellow;
+                 }
+                 & .image-wrapper {
+                    flex: 0.7;
+                    display: flex;
+                    justify-content: center;
+                    min-height: 300px;
+                 }
+                 & .text-wrapper {
+                    flex: 0.3;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    & h3 {
+                        font-size: 1.5rem;
+                    }
+                    & p {
+                        font-size: 1.125rem;
+                        &.price {
+                            font-size: 1.25rem;
+                            font-weight: 600;
+                        }
+                    }
+                 }
+            }
+        }
+        & button {
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            & img {
+                padding-top: 9px;
+            }
+        }
+    }
+}
+
+.special-package {
+    padding:$padding-y-axis/2 $padding-x-axis;
+    & h2 {
+        text-align: center;
+    }
+    & .content-wrapper {
+        display: flex;
+        gap: 50px;
+        padding-top: 50px;
+      
+        & .product {
+            flex: 0.5;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            justify-content: space-between;
+            & .primary-image {
+                flex: 1;
+                background-color: $clr-light-pink;
+                border-radius: 16px;
+            }
+            & .primary-text {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                & .summary {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+                    & .stars {
+                        max-width: 100px;
+                    }
+                }
+                & h3 {
+                    font-size: 2.25rem;
+                    font-weight: 400;
+                }
+                & p.price {
+                    font-size: 1.75rem;
+                    font-weight: 700;
+                }
+            }
+        }
+        & .information {
+            flex: 0.5;
+            color: $clr-main-dark;
+           & h4 {
+            padding-bottom: 10px;
+           }
+           & h5 {
+            font-family: $accent-font;
+            font-weight: 600;
+            font-size: 1.3rem;
+            line-height: 1.2;
+            padding-bottom: 10px;
+           }
+           & p {
+            font-family: $primary-font;
+            font-size: 1rem;
+            line-height: 1.3;
+            text-align: justify;
+           }
+           & .related-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding-top: 50px;
+            & .related-product {
+                background-color: $clr-light-gray-opacity;
+                border-radius: 16px;
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 0.8fr 1.2fr;
+                gap: 20px;
+                justify-items: start;
+                & .image {
+                    grid-row: 1/4;
+                    & img {
+                        max-width: 130px;
+                        max-height: 130px;
+                    }
+                }
+                & .stars {
+                    
+                    & img {
+                        max-width: 100px;
+                    }
+                }
+                & p.price {
+                    font-family: $primary-font;
+                    font-size: 1.1rem;
+                    line-height: 1.2;
+                   }
+            }
+           }
+        }
+    }
+    
+}
+
+.designed {
+    display: flex;
+    min-height: 500px;
+    padding: $padding-y-axis 0;
+    & .main-box {
+        flex: 0.2;
+        background-color: $clr-main-light;
+        display: grid;
+        justify-content: center;
+        align-content: space-evenly;
+        padding: 20px;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        color: $clr-light-beige;
+        & h3 {
+            font-size: 2rem;
+        }
+       
+    }
+    & .designers-boxes {
+        display: flex;
+        flex: 0.8;
+        justify-content: space-evenly;
+        align-items: center;
+        & .box {
+            background-color: rgba(240, 240, 240, 0.4705882353);
+            display: grid;
+            place-content: center;
+            // padding: 20px;
+            border-radius: 16px;
+            width: 19%;
+            row-gap: 10px;
+            & img {
+                border-radius: 16px;
+            }
+        }
+    }
+}
+
+.benefits {
+    background-color: $clr-light-blue;
+    padding: $padding-y-axis $padding-x-axis;
+    & h2 {
+        text-align: center;
+        padding-bottom: $padding-y-axis;
+    }
+    & .content {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        min-height: 300px;
+        text-align: center;
+        justify-content: center;
+        gap: 30px;
+        & .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            &:first-child .image{
+               background-color: $clr-light-pink;
+            }
+            &:nth-child(2) .image {
+                background-color: $clr-light-yellow;
+            }
+            &:nth-child(3) .image {
+                background-color: $clr-light-green;
+            }
+            & .image {
+                display: flex;
+                justify-content: center;
+               
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                align-items: center;
+                
+                & img {
+                    max-width: 70px;
+                    max-height: 70px;
+                }
+            }
+            & h3 {
+                font-size: 2rem;
+            }
+            & p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+.testimonials {
+    padding: $padding-y-axis/2 $padding-x-axis;
+    & h2 {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    & h3 {
+        text-align: center;
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+    & .content {
+        padding-top: $padding-x-axis/2;
+       & .swiper-wrapper {
+        padding-bottom: 40px;
+        
+       }
+       & .navigation {
+        display: flex;
+        position: relative;
+        align-items: center;
+        column-gap: 30px;
+        & .swiper-scrollbar {
+            flex: 1;
+            position: relative;
+            bottom: 0;
+            left: 0;
+        }
+        & button {
+            flex: 0.2;
+            max-width: max-content;
+        }
+    }
+        & .testimonial-item {
+            display: flex;
+            & .image {
+                flex: 0.3;
+                display: grid;
+                place-content: center;
+                margin-left: 5vw;
+            }
+            & .text {
+                flex: 0.7;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                row-gap: 20px;
+                & blockquote {
+                    font-size: 1.2rem;
+                    line-height: 1.3;
+                    padding-right: 40px;
+                    text-align: justify;
+                    margin-right: 5vw;
+                }
+                & .attribution {
+                    & p {
+                        font-size: 1.3rem;
+                        &.person {
+                            font-weight: 600;
+                        }
+                        &.position {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.newsletter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    & .image {
+        display: flex;
+        align-items: center;
+    }
+    & .content {
+        background-color: $clr-light-green;
+        padding: 4rem;
+        display: grid;
+        & h2 {
+            font-weight: 400;
+            & span.bold {
+                font-weight: 600;
+                display: block
+            }
+        }
+        & p {
+            font-size: 1.5rem;
+        }
+       
+        & form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 250px;
+            & input {
+                height: 44px;
+               padding: 10px 30px;
+               border-radius: 10px;
+                outline: none;
+                border: none;
+                width: 100%;
+            }
+            & button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: $padding-y-axis $padding-x-axis;
+    & h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-family: $primary-font;
+        padding-bottom: 20px;
+    }
+    & li {
+        line-height: 2.5;
+    }
+    & .address {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding-bottom: 20px;
+        & .social-media {
+            display: flex;
+            gap: 15px;
+            & a {
+                & img {
+                    max-width: 30px;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    padding: 20px $padding-x-axis;
+    & a {
+        padding: 5px 15px;
+        border-radius: 10px;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    & p {
+        font-size: 1rem;
+    }
+    & #attributions {
+        margin-bottom: 20px;
+    }
+    & #attributions-wrapper {
+        display: none; 
+        &.attributionOpen {
+            display: block;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 1440px) {
+    header {
+        padding: 0 3.375rem;
+    }
+    .main-banner {
+        & .content {
+            padding-left: 3.375rem;
+        }
+    }
+    .special-package {
+       & .content-wrapper {
+            flex-direction: column;
+            & .product {
+                flex-direction: row;
+                gap: 20px;
+                min-height: 50vh;
+                & .primary-text {
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+            & .information {
+                & .related-grid {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    & .related-product {
+                        grid-template-columns: 1fr;
+                        justify-items: center;
+                    }
+                }
+                & h4 {
+                    text-align: center;
+                }
+                & h5 {
+                    text-align: center;
+                }
+                & p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .main-banner {
+        & .content {
+            max-width: 50%;
+            gap: 25px;
+        }
+    }
+    .categories-section {
+        padding: 6.25rem 3.375rem 3.125rem;
+    }
+    .special-package {
+        padding: 6.25rem 3.375rem 3.125rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    header {
+        padding: 20px 2.375rem;
+    }
+    .main-banner {
+        background: url(/assets/images/Header/empty-modern-room-with-furniture-mobile.png) no-repeat;
+        background-color: $clr-bg-multipy;
+        background-size: cover;
+        background-position: left;
+        & .content {
+            padding-left: 3.375rem;
+        }
+    }
+    .categories-section {
+        & .content {
+            & .category-blocks {
+                grid-template-rows: repeat(3, 250px);
+                & .block {
+                    & h3 {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    .designed {
+        gap: 20px;
+        flex-direction: column;
+        & .main-box {
+            max-width: 85%;
+            padding: 35px;
+            gap: 20px;
+        }
+        & .designers-boxes {
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            & .box {
+                width: 30%;
+            }
+        }
+    }
+    .testimonials {
+        padding: 3.125rem 3.375rem;
+    }
+    .footer {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        padding: 3.25rem 2.375rem;
+    }
+    .copyright {
+        padding: 20px 2.375rem;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    h1, h2 {
+        font-size: 3rem;
+    }
+    .button-large {
+        padding: 20px 22px;
+        font-size: 1.2rem;
+    }
+    header {
+        column-gap: 15px;
+        & .logo {
+            flex: 1;
+        }
+        & .shop-menu {
+            flex: 0.5;
+        }
+        & .main-menu {
+            display: none;
+            position: absolute;
+           
+            &.open {
+                    display: block;
+                    background-color: $clr-bg-header;
+                    bottom: 0;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    display: grid;
+                    place-content: center;
+                    & ul {
+                        flex-direction: column;
+                        align-items: center;
+                        & li {
+                            line-height: 3.5rem;
+                        }
+                    }
+            }
+        }
+        & #burger {
+            display: block;
+            border-color: transparent;
+            background-color: transparent;
+            z-index: 100;
+        }
+    }
+    .benefits {
+        & .content {
+            grid-template-columns:  1fr;
+            gap: 50px;
+        }
+    }
+    .special-package {
+        & .content-wrapper {
+            & .product {
+                & .primary-text {
+                    flex: 0.6;
+                }
+            }
+           & .information {
+               & .related-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+    .categories-section {
+        padding: 6.25rem 2.375rem 3.125rem;
+        & .content {
+            column-gap: 20px;
+            & .sidebar {
+                & .search {
+                    & input {
+                        padding-left: 62px;
+                        min-height: 54px;
+                        background-size: 1.2rem;
+                    }
+                }
+                & .category-list {
+                    padding-left: 0;
+                }
+                & button {
+                    font-size: 1rem;
+                    column-gap: 0;
+                }
+            }
+            & .category-blocks {
+                & .block {
+                    & h3 {
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 150px max-content;
+        gap: 50px;
+        & .address {
+            grid-column: 1/5;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main-banner {
+        height: 75vh;
+        & .content {
+            padding: 3rem;
+            gap: 40px;
+            max-width: 90%;
+        }
+    }
+    .special-package {
+        padding: 3rem;
+        & .content-wrapper {
+            & .product {
+                flex-direction: column;
+                & .primary-image {
+                    min-height: 350px;
+                }
+            }
+        }
+    }
+    .designed {
+        padding: 2.25rem 0;
+        & .designers-boxes {
+            & .box {
+                width: 45%;
+            }
+        }
+    }
+    .categories-section {
+        & .content {
+            flex-direction: column;
+            padding: 2.25rem 0;
+            row-gap: 50px;
+            & .sidebar {
+                row-gap: 20px;
+                align-items: center;
+                & .category-list {
+                    overflow: visible;
+                    column-count: 4;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .benefits {
+        padding: 4.25rem 2.5rem;
+        & h2 {
+            padding-bottom: 3.25rem;
+        }
+        & .content {
+            & .box {
+                gap: 5px;
+            }
+        }
+    }
+    .testimonials {
+        & .content {
+            & .testimonial-item {
+                & .text {
+                    flex: 0.5;
+                    & blockquote {
+                        font-size: 1rem;
+                        line-height: 1.2;
+                        padding-right: 0;
+                        text-align: start;
+                        margin-right: 0;
+                    }
+                }
+                & .image {
+                    flex: 0.5;
+                }
+            }
+            & .navigation {
+                justify-content: space-between;
+                column-gap: 15px;
+                & .swiper-scrollbar {
+                    flex: 0.7;
+                }
+                & button {
+                    flex: 0.3;
+                }
+            }
+        }
+    }
+    .newsletter {
+        min-height: 400px;
+        & .content {
+            padding: 2rem;
+            align-content: space-evenly;
+            & p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .footer {
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .special-package {
+        & .content-wrapper {
+            & .information {
+                & .related-grid {
+                    & .related-product {
+                        padding: 15px;
+                        gap: 15px;
+                        & .image {
+                            & img {
+                                max-width: 100px;
+                                max-height: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .newsletter {
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px 350px;
+    }
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 14px ;
+        & .address {
+            grid-column: 1/3;
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width:450px) {
+    h1, h2 {
+        font-size: 2.3rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .categories-section {
+        & .content {
+            & .sidebar {
+                & .category-list {
+                    display: none;
+                }
+            }
+            & .category-blocks {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 220px);
+            }
+        }
+    }
+    .special-package {
+        & .content-wrapper {
+            & .information {
+                & .related-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            & .product {
+                & .primary-text {
+                    & h3 {
+                        font-size: 1.8rem;
+                        text-align: center;
+                    }
+                    & .summary {
+                        align-items: center;
+                        & h3 {
+                            text-align: center;
+                        }
+                        & p.price {
+                            font-size: 1.25rem;
+                        }
+                    }
+                    & button {
+                        margin: 10px auto;
+                    }
+                }
+            }
+        }
+    }
+    .designed {
+        & .designers-boxes {
+            & .box {
+                min-height: 230px;
+            }
+        }
+    }
+    .benefits {
+        & .content {
+            & .box {
+                & h3 {
+                    font-size: 1.4rem;
+                }
+                & p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .testimonials {
+        padding: 3.125rem 1.375rem;
+        & h3 {
+            font-size: 1.5rem;
+        }
+        &  .content  {
+            & .testimonial-item {
+                flex-direction:column;
+                & .text {
+                    & blockquote {
+                        text-align: center;
+                    }
+                    & .attribution {
+                        & p.person {
+                            text-align: center;
+                            font-size: 1.1rem;
+                        }
+                        & p.position {
+                            text-align: center;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+            & .navigation {
+                & button {
+                    flex: 0.5;
+                    font-size: 1rem;
+                }
+            }
+        }
+        & .swiper-button-next {
+            top: 41%;
+        }
+        & .swiper-button-prev {
+            top: 41%;
+        }
+    }
+    .footer {
+        & h2 {
+            font-size: 1.2rem;
+            padding-bottom: 5px;
+        }
+        & li {
+            line-height: 2;
+        }
+    }
+    .copyright {
+        & p {
+            font-size: 0.8rem;
+        }
+    }
+}
