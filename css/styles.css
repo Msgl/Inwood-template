@@ -114,12 +114,13 @@ ul {
   padding: 0;
 }
 
-button {
+button, .button {
   border-radius: 10px;
   border-style: solid;
   font-family: inherit;
   padding: 10px 15px;
   cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .button-large {
@@ -132,17 +133,30 @@ button {
   border-color: #70908B;
   color: #fff;
 }
+.button-variation-1:hover {
+  background-color: #07484A;
+  border-color: #07484A;
+}
 
 .button-variation-2 {
   background-color: #E0EFF6;
   border-color: #E0EFF6;
   color: #07484A;
 }
+.button-variation-2:hover {
+  background-color: #ceefff;
+  border-color: #ceefff;
+}
 
 .button-variation-3 {
   background-color: #FDFBF8;
   border-color: #FDFBF8;
   color: #07484A;
+}
+.button-variation-3:hover {
+  background-color: #07484A;
+  border-color: #07484A;
+  color: #fff;
 }
 
 header {
@@ -166,10 +180,29 @@ header .main-menu ul {
 }
 header .main-menu ul a {
   font-size: 1.25rem;
+  display: inline-block;
+  position: relative;
+  color: #07484A;
+  font-weight: 400;
 }
 header .main-menu ul a.active {
   font-weight: 600;
-  text-decoration: underline;
+}
+header .main-menu ul a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #07484A;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+header .main-menu ul a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 header .shop-menu {
   flex: 0.2;
@@ -202,7 +235,7 @@ header #burger {
   padding-left: 9.375rem;
   max-width: 800px;
 }
-.main-banner button {
+.main-banner a {
   font-weight: 600;
 }
 

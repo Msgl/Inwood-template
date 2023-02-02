@@ -86,32 +86,47 @@ ul {
     padding: 0;
 }
 
-button {
+button, .button {
     border-radius: 10px;
     border-style: solid;
     font-family: inherit;
     padding: 10px 15px;
     cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
+
 .button-large {
     padding: 20px 40px;
     font-size: 1.5rem;
 }
-
 .button-variation-1 {
     background-color: $clr-main-light;
     border-color: $clr-main-light;
     color: $clr-white;
+    &:hover {
+        background-color: $clr-main-dark;
+        border-color: $clr-main-dark;
+    }
 }
+
 .button-variation-2 {
     background-color: $clr-light-blue;
     border-color:  $clr-light-blue;
     color: $clr-main-dark;
+    &:hover {
+        background-color: #ceefff;
+        border-color: #ceefff;
+    }
 }
 .button-variation-3 {
     background-color: $clr-light-beige;
     border-color:  $clr-light-beige;
     color: $clr-main-dark;
+    &:hover {
+        background-color:  $clr-main-dark;
+        border-color: $clr-main-dark;
+        color: $clr-white;
+    }
 }
 
 header {
@@ -132,11 +147,29 @@ header {
             margin: 0 auto;
             & a {
                 font-size: 1.25rem;
+                display: inline-block;
+                position: relative;
+                color: $clr-main-dark;
+                font-weight: 400;
                 &.active {
                     font-weight: 600;
-                    text-decoration: underline;
-                    
                 }
+                  &:after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $clr-main-dark;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                  }
+                  &:hover:after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                  }
             }
         }
     }
@@ -171,7 +204,7 @@ header {
         padding-left: $padding-x-axis;
         max-width: 800px;
     }
-    & button {
+    & a {
         font-weight: 600;
     }
 }
